@@ -1,0 +1,35 @@
+{
+  "name": "ucla-moduel-14-mvc",
+  "version": "1.0.0",
+  "description": "MVC MODUEL 14.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/404ismagic/UCLA-MODUEL-14-MVC.git"
+  },
+  "keywords": [],
+  "author": "james",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/404ismagic/UCLA-MODUEL-14-MVC/issues"
+  },
+  "homepage": "https://github.com/404ismagic/UCLA-MODUEL-14-MVC#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bulma": "^0.9.4",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.4",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.30.0"
+  }
+}
