@@ -33,7 +33,7 @@ router.get('/', withAuth, (req, res) => {
       .then(dbPost => {
         
         const posts = dbPost.map(post => post.get({ plain: true }));
-        res.render('dashboard', { posts, loggedIn: true });
+        res.render('dashBoard', { posts, loggedIn: true });
       })
       .catch(err => {
         console.log(err);
@@ -76,7 +76,7 @@ router.get('/', withAuth, (req, res) => {
         
         const post = dbPost.get({ plain: true });
 
-        res.render('edit-post', {
+        res.render('postEdit', {
             post,
             loggedIn: true
             });
@@ -117,7 +117,7 @@ router.get('/create/', withAuth, (req, res) => {
       .then(dbPost => {
         
         const posts = dbPost.map(post => post.get({ plain: true }));
-        res.render('createPosts', { posts, loggedIn: true });
+        res.render('createPost', { posts, loggedIn: true });
       })
       .catch(err => {
         console.log(err);
