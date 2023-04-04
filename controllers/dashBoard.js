@@ -31,7 +31,7 @@ router.get('/', withAuth, (req, res) => {
       ]
     })
       .then(dbPost => {
-        // serialize data before passing to template
+        
         const posts = dbPost.map(post => post.get({ plain: true }));
         res.render('dashboard', { posts, loggedIn: true });
       })
@@ -73,7 +73,7 @@ router.get('/', withAuth, (req, res) => {
           return;
         }
   
-        // serialize the data
+        
         const post = dbPost.get({ plain: true });
 
         res.render('edit-post', {
@@ -90,7 +90,7 @@ router.get('/', withAuth, (req, res) => {
 router.get('/create/', withAuth, (req, res) => {
     Post.findAll({
       where: {
-        // use the ID from the session
+        
         user_id: req.session.user_id
       },
       attributes: [
@@ -115,9 +115,9 @@ router.get('/create/', withAuth, (req, res) => {
       ]
     })
       .then(dbPost => {
-        // serialize data before passing to template
+        
         const posts = dbPost.map(post => post.get({ plain: true }));
-        res.render('create-post', { posts, loggedIn: true });
+        res.render('createPosts', { posts, loggedIn: true });
       })
       .catch(err => {
         console.log(err);
